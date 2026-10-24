@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b16">
+  <title>ROMI // Digital Profile</title>
+  <meta name="description" content="Profil digital Romi — gamer, pelajar TKJ, dan calon web developer.">
+  <style>
+    :root{--bg:#070914;--panel:rgba(17,22,43,.78);--line:rgba(125,145,255,.22);--text:#eef1ff;--muted:#9da7c8;--cyan:#54f5ff;--violet:#a78bfa;--pink:#ff5edb}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 10%,#18204a 0,transparent 35%),radial-gradient(ellipse at 90% 30%,#271342 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(rgba(130,150,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(130,150,255,.12) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:15px}.brand{font-weight:900;letter-spacing:.16em}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:20px;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--cyan)}button,.btn{border:1px solid var(--line);background:rgba(20,27,53,.8);color:var(--text);padding:11px 15px;border-radius:12px;cursor:pointer;font:inherit;transition:.25s}button:hover,.btn:hover{transform:translateY(-2px);border-color:var(--cyan);box-shadow:0 0 22px #54f5ff20}.primary{background:linear-gradient(100deg,#5aebf6,#a78bfa);color:#080b16;border:0;font-weight:800}
+    .hero{min-height:75vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:35px;padding:48px 0 70px}.eyebrow{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.hero h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.98;letter-spacing:-.065em;margin:18px 0}.gradient{background:linear-gradient(100deg,var(--cyan),var(--violet),var(--pink));background-clip:text;color:transparent}.lead{color:var(--muted);font-size:1.08rem;line-height:1.8;max-width:570px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.mini{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:.9rem}.mini b{color:var(--text);display:block;font-size:1.15rem}
+    .orbital{position:relative;min-height:360px;display:grid;place-items:center}.orb{width:min(320px,75vw);aspect-ratio:1;border-radius:50%;border:1px solid #54f5ff66;box-shadow:0 0 45px #54f5ff12,inset 0 0 45px #a78bfa14;display:grid;place-items:center;animation:float 5s ease-in-out infinite;position:relative}.orb:before,.orb:after{content:"";position:absolute;inset:18px;border:1px dashed #a78bfa70;border-radius:50%;animation:spin 24s linear infinite}.orb:after{inset:-20px;border-color:#ff5edb55;transform:rotateX(68deg);animation-duration:12s}.avatar{width:62%;aspect-ratio:1;border-radius:28%;display:grid;place-items:center;font-size:clamp(3rem,10vw,5rem);font-weight:950;background:linear-gradient(145deg,#182b52,#21143d);border:1px solid #54f5ff80;color:var(--cyan);text-shadow:0 0 30px #54f5ff88;box-shadow:0 0 45px #54f5ff20;transform:rotate(-5deg)}.float-tag{position:absolute;padding:10px 13px;background:#0d1228dd;border:1px solid var(--line);border-radius:12px;color:var(--cyan);font-size:.8rem;backdrop-filter:blur(10px)}.tag1{top:12%;right:0}.tag2{bottom:12%;left:0;color:var(--pink)}
+    section{padding:48px 0}.section-head{margin-bottom:24px}.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:9px 0}.section-head p{color:var(--muted);line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel);backdrop-filter:blur(12px);transition:.3s}.card:hover{transform:translateY(-5px);border-color:#54f5ff88;box-shadow:0 15px 40px #0003}.icon{font-size:1.7rem}.card h3{margin:12px 0 8px}.card p{color:var(--muted);line-height:1.7;margin:0}.chips{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:8px 12px;border:1px solid var(--line);border-radius:99px;color:#c9d1f4;background:#11162c}.progress{height:6px;background:#252b46;border-radius:99px;margin-top:13px;overflow:hidden}.progress span{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--cyan),var(--violet));border-radius:99px;animation:grow 1.5s ease both}
+    .contact{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer{padding:30px 0 45px;color:var(--muted);font-size:.85rem;border-top:1px solid #ffffff12;margin-top:25px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:#121a32;border:1px solid var(--cyan);padding:12px 17px;border-radius:12px;transition:.25s;z-index:50;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+    .modal{position:fixed;inset:0;background:#03040bd9;display:none;place-items:center;padding:18px;z-index:100;backdrop-filter:blur(9px)}.modal.open{display:grid}.modalbox{width:min(420px,100%);padding:25px;border:1px solid #54f5ff66;border-radius:20px;background:#0c1022;box-shadow:0 0 60px #54f5ff18}.modalbox h2{margin-top:0}.field{display:grid;gap:7px;margin:14px 0}.field label{color:var(--muted);font-size:.9rem}.field input{width:100%;background:#070a17;border:1px solid var(--line);border-radius:10px;padding:12px;color:white;font:inherit}.hint{font-size:.82rem;color:var(--muted);line-height:1.6}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.hidden{display:none!important}
+    @keyframes spin{to{transform:rotate(360deg)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@keyframes grow{from{width:0}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+    @media(max-width:760px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:35px;gap:5px;text-align:center}.lead{margin:auto}.actions,.mini{justify-content:center}.orbital{min-height:310px;order:-1}.orb{width:235px}.grid{grid-template-columns:1fr}.contact{align-items:flex-start}.wrap{width:min(100% - 30px,600px)}section{padding:35px 0}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home">ROMI<span>_</span>SYS</a>
+    <nav class="navlinks" aria-label="Navigasi"><a href="#about">Tentang</a><a href="#skills">Skill</a><a href="#projects">Proyek</a><a href="#contact">Kontak</a></nav>
+    <button id="loginBtn">↗ Login</button>
+  </header>
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">● SYSTEM ONLINE // PERSONAL PORTFOLIO</div>
+        <h1>Halo, gue<br><span class="gradient">Romi Ahmad.</span></h1>
+        <p class="lead">Pelajar TKJ, penggemar gaming, dan calon developer yang lagi membangun masa depan—satu baris kode setiap kali.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Jelajahi profil ↘</a><button id="soundBtn">♫ Aktifkan suara</button></div>
+        <div class="mini"><div><b>TKJ</b>Bidang belajar</div><div><b>GAMING</b>Passion</div><div><b>∞</b>Terus berkembang</div></div>
+      </div>
+      <div class="orbital" aria-label="Avatar dekoratif">
+        <div class="orb"><div class="avatar">RA</div></div><div class="float-tag tag1">[ CREATIVE MODE ]</div><div class="float-tag tag2">LEVEL UP ▲</div>
+      </div>
+    </div>
+    <section class="wrap" id="about">
+      <div class="section-head"><div class="eyebrow">01 / ABOUT ME</div><h2>Di balik layar <span class="gradient">digital.</span></h2><p>Gue suka dunia teknologi, komputer, jaringan, dan game. Website ini jadi ruang buat nunjukin minat, proses belajar, dan hal-hal yang ingin gue capai.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">⌘</div><h3>Tech Explorer</h3><p>Belajar perangkat komputer, jaringan, troubleshooting, dan dasar pemrograman.</p></article>
+        <article class="card"><div class="icon">🎮</div><h3>Gaming Enthusiast</h3><p>Suka main game kompetitif dan terus belajar strategi, fokus, serta kerja sama tim.</p></article>
+        <article class="card"><div class="icon">✦</div><h3>Future Builder</h3><p>Punya rasa ingin tahu, berani mencoba, dan mau berkembang lewat proyek kecil.</p></article>
+      </div>
+    </section>
+    <section class="wrap" id="skills">
+      <div class="section-head"><div class="eyebrow">02 / SKILL MATRIX</div><h2>Yang lagi gue <span class="gradient">pelajari.</span></h2><p>Ini contoh skill awal—silakan ubah sesuai kemampuan asli lu.</p></div>
+      <div class="card">
+        <p>HTML & struktur web</p><div class="progress"><span style="--w:65%"></span></div>
+        <p style="margin-top:18px">CSS & desain responsif</p><div class="progress"><span style="--w:50%"></span></div>
+        <p style="margin-top:18px">Komputer & jaringan dasar</p><div class="progress"><span style="--w:60%"></span></div>
+        <p style="margin-top:18px">JavaScript</p><div class="progress"><span style="--w:25%"></span></div>
+      </div>
+    </section>
+    <section class="wrap" id="projects">
+      <div class="section-head"><div class="eyebrow">03 / PROJECT LOG</div><h2>Lab <span class="gradient">eksperimen.</span></h2><p>Contoh proyek yang bisa lu ganti dengan karya sendiri saat sudah dibuat.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">🌐</div><h3>Personal Website</h3><p>Website profil pertama dengan HTML, CSS, dan sedikit JavaScript.</p><div class="chips" style="margin-top:15px"><span class="chip">HTML</span><span class="chip">CSS</span></div></article>
+        <article class="card"><div class="icon">🖥️</div><h3>PC Setup Plan</h3><p>Riset komponen PC, kompatibilitas, dan rencana setup gaming.</p><div class="chips" style="margin-top:15px"><span class="chip">Hardware</span><span class="chip">Research</span></div></article>
+        <article class="card"><div class="icon">⚡</div><h3>Next Mission</h3><p>Tempat buat proyek berikutnya. Satu langkah kecil tetap sebuah progres.</p><div class="chips" style="margin-top:15px"><span class="chip">Coming soon</span></div></article>
+      </div>
+    </section>
+    <section class="wrap" id="contact">
+      <div class="card contact"><div><div class="eyebrow">04 / ESTABLISH CONNECTION</div><h2 style="margin:9px 0">Punya ide? <span class="gradient">Gas!</span></h2><p class="lead" style="font-size:.95rem">Tambahkan kontak publik lu di sini kalau memang mau dibagikan.</p></div><button class="primary" id="contactBtn">Kirim sinyal ↗</button></div>
+    </section>
+  </main>
+  <footer class="wrap footer">© <span id="year"></span> ROMI // Dibangun dengan rasa penasaran dan kode. <span style="float:right">VERSION 1.0</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="modalbox">
+      <h2 id="loginTitle">Akses <span class="gradient">terminal.</span></h2>
+      <p class="hint">Demo tampilan login lokal—bukan sistem akun sungguhan.</p>
+      <form id="loginForm">
+        <div class="field"><label for="username">Nama pengguna</label><input id="username" name="username" autocomplete="username" placeholder="contoh: romi" required maxlength="30"></div>
+        <div class="field"><label for="password">Kata sandi demo</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Isi apa saja untuk demo" required maxlength="80"></div>
+        <div class="modal-actions"><button class="primary" type="submit">Masuk</button><button type="button" id="closeModal">Batal</button></div>
+      </form>
+      <p class="hint">Jangan masukkan kata sandi asli. Login ini hanya menampilkan simulasi di browser dan tidak memverifikasi identitas.</p>
+    </div>
+  </div>
+  <script>
+    const $ = s => document.querySelector(s);
+    const toast = (message) => { const el = $('#toast'); el.textContent = message; el.classList.add('show'); clearTimeout(window.toastTimer); window.toastTimer = setTimeout(()=>el.classList.remove('show'), 2600); };
+    $('#year').textContent = new Date().getFullYear();
+    $('#loginBtn').addEventListener('click',()=>$('#loginModal').classList.add('open'));
+    $('#closeModal').addEventListener('click',()=>$('#loginModal').classList.remove('open'));
+    $('#loginModal').addEventListener('click',e=>{if(e.target.id==='loginModal') $('#loginModal').classList.remove('open')});
+    $('#loginForm').addEventListener('submit',e=>{e.preventDefault(); const name=$('#username').value.trim(); $('#loginModal').classList.remove('open'); toast(`Mode demo aktif. Halo, ${name}!`); e.target.reset();});
+    $('#contactBtn').addEventListener('click',()=>toast('Edit tombol ini untuk menambahkan email atau media sosial publik lu.'));
+    let audioCtx=null, oscillator=null, gain=null, playing=false;
+    $('#soundBtn').addEventListener('click', async ()=>{
+      try{
+        if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+        if(audioCtx.state==='suspended') await audioCtx.resume();
+        if(!playing){ oscillator=audioCtx.createOscillator(); gain=audioCtx.createGain(); oscillator.type='sine'; oscillator.frequency.value=174.61; gain.gain.value=0.018; oscillator.connect(gain); gain.connect(audioCtx.destination); oscillator.start(); playing=true; $('#soundBtn').textContent='♫ Matikan suara'; toast('Efek nada ambient aktif.');}
+        else{ oscillator.stop(); oscillator=null; playing=false; $('#soundBtn').textContent='♫ Aktifkan suara'; toast('Suara dimatikan.');}
+      }catch(err){toast('Browser tidak mendukung efek suara ini.');}
+    });
+    document.addEventListener('keydown',e=>{if(e.key==='Escape') $('#loginModal').classList.remove('open')});
+  </script>
+</body>
+</html>
